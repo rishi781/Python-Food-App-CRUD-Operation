@@ -1,0 +1,47 @@
+{% extends "foodapp/base.html" %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #fffaf0;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile-container {
+        max-width: 500px;
+        margin: 60px auto;
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #e67e22;
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .profile-container h3 span {
+        color: #e74c3c;
+        font-weight: 600;
+    }
+</style>
+
+<div class="profile-container">
+    <h1>👤 Profile Page</h1>
+    <h3>First Name: <span>{{ user.first_name }}</span></h3>
+    <h3>Last Name: <span>{{ user.last_name }}</span></h3>
+    <h3>Email ID: <span>{{ user.email }}</span></h3>
+</div>
+{% endblock %}
